@@ -32,7 +32,9 @@ body{
 }
 
 .btn{
-	border-color: white;
-	background: rgb(30, 49, 79);
-	height: 40px;
+	border: 5px solid white;
+	background-color: rgb(30, 49, 79);
+	cursor: pointer;
+	transition-duration: 0.5s;
+	border-radius: 5px;
 }
