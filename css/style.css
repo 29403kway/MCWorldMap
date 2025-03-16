@@ -43,3 +43,9 @@ body{
 .btn:hover{
 	background-color: rgb(153, 228, 255);
 }
+
+#draggable{
+	position: absolute;
+	cursor: move;
+	
+}
