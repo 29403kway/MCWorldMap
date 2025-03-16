@@ -3,11 +3,20 @@ body{
 }
 
 @font-face{
+	font-family: BebasNeue;
+	src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+@font-face{
 	font-family: NotoSans;
 	src: url(../fonts/Noto_Sans/static/NotoSans-Medium.ttf);
 }
 
 .title_font{
+	font-family: BebasNeue;
+}
+
+.normal_font{
 	font-family: NotoSans;
 }
 
