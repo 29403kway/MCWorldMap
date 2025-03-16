@@ -12,6 +12,6 @@ body{
 }
 
 .content{
-	background-color: white;
-	border-radius: 25px;
+	background: white;
+	border-radius: 5px;
 }
