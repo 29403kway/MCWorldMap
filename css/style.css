@@ -30,3 +30,9 @@ body{
 .img{
 	border-radius: 5px;
 }
+
+.btn{
+	border-color: white;
+	background: rgb(30, 49, 79);
+	height: 40px;
+}
