@@ -1,5 +1,5 @@
 body{
-	background-color: rgb(25, 34, 48)
+	background-color: rgb(25, 34, 48);
 }
 
 @font-face{
@@ -9,4 +9,9 @@ body{
 
 .title_font{
 	font-family: NotoSans;
+}
+
+.content{
+	background-color: white;
+	border-radius: 25px;
 }
