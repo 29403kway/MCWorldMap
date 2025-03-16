@@ -32,10 +32,14 @@ body{
 }
 
 .btn{
-	border: 5px solid white;
-	background-color: rgb(30, 49, 79);
+	border: 5px solid rgb(30, 49, 79);
+	background-color: white;
 	cursor: pointer;
 	transition-duration: 0.5s;
 	border-radius: 5px;
 	padding: 15px 32px;
+}
+
+.btn:hover{
+	background-color: rgb(153, 228, 255);
 }
