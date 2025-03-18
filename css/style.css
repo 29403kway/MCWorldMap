@@ -44,16 +44,19 @@ body{
 	background-color: rgb(153, 228, 255);
 }
 
-#draggable{
-	position: absolute;
-	cursor: move;
-	
+.drag-container{
+	height: 500vh;
+	width: 500vw;
+	position: relative;
 }
 
 .map_img{
+	position: absolute;
+	cursor: move;
 	background: url("../images/map.png") no-repeat;
-	width: 500px;
-	height: 500px;
-	top: 50%;
+	transform: translate(-50%, -50%);
 	left: 50%;
+	top: 50%;
+	display: grid;
+	place-items: center;
 }
