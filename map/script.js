@@ -1,75 +1,43 @@
-let draggableElem = document.getElementById("draggable");
-let initialX = 0,
-  initialY = 0;
-let moveElement = false;
+//Make the DIV element draggagle:
+dragElement(document.getElementById("draggable"));
 
-//Events Object
-let events = {
-  mouse: {
-    down: "mousedown",
-    move: "mousemove",
-    up: "mouseup",
-  },
-  touch: {
-    down: "touchstart",
-    move: "touchmove",
-    up: "touchend",
-  },
-};
-
-let deviceType = "";
-
-//Detech touch device
-const isTouchDevice = () => {
-  try {
-    //We try to create TouchEvent (it would fail for desktops and throw error)
-    document.createEvent("TouchEvent");
-    deviceType = "touch";
-    return true;
-  } catch (e) {
-    deviceType = "mouse";
-    return false;
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
   }
-};
 
-isTouchDevice();
-
-//Start (mouse down / touch start)
-draggableElem.addEventListener(events[deviceType].down, (e) => {
-  e.preventDefault();
-  //initial x and y points
-  initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-  initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-
-  //Start movement
-  moveElement = true;
-});
-
-//Move
-draggableElem.addEventListener(events[deviceType].move, (e) => {
-  //if movement == true then set top and left to new X andY while removing any offset
-  if (moveElement) {
+  function dragMouseDown(e) {
+    e = e || window.event;
     e.preventDefault();
-    let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-    let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-    draggableElem.style.top =
-      draggableElem.offsetTop - (initialY - newY) + "px";
-    draggableElem.style.left =
-      draggableElem.offsetLeft - (initialX - newX) + "px";
-    initialX = newX;
-    initialY = newY;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
   }
-});
 
-//mouse up / touch end
-draggableElem.addEventListener(
-  events[deviceType].up,
-  (stopMovement = (e) => {
-    moveElement = false;
-  })
-);
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
 
-draggableElem.addEventListener("mouseleave", stopMovement);
-draggableElem.addEventListener(events[deviceType].up, (e) => {
-  moveElement = false;
-});
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
