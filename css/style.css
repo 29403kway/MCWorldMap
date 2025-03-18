@@ -45,8 +45,8 @@ body{
 }
 
 .drag-container{
-	height: 500vh;
-	width: 500vw;
+	height: 100vh;
+	width: 100vw;
 	position: relative;
 }
 
