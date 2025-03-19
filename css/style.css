@@ -23,8 +23,8 @@ body{
 .content{
 	background: white;
 	border-radius: 5px;
-	margin-left: 200px;
-	margin-right: 200px;
+	margin-left: 20vw;
+	margin-right: 20vw;
 }
 
 .img{
@@ -51,8 +51,9 @@ body{
 }
 
 .mapframe{
+	position: center;
 	border: 2px solid #275ddb;
 	overflow: hidden;
-	width: 40vw;
-	height: 40vh;
+	width: 90vw;
+	height: 60vh;
 }
