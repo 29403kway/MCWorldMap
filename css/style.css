@@ -51,7 +51,8 @@ body{
 }
 
 .mapframe{
-	position: center;
+	position: fixed;
+	left: 50vh;
 	border: 2px solid #275ddb;
 	overflow: hidden;
 	width: 90vw;
