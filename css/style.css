@@ -48,10 +48,10 @@ body{
   position: absolute;
   place-items: center;
   cursor: move;
+  border: 2px solid #275ddb;
 }
 
 .mapframe{
-	border: 2px solid #275ddb;
 	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
