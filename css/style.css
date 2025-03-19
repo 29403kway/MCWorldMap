@@ -53,6 +53,15 @@ body{
 .mapframe{
 	border: 2px solid #275ddb;
 	overflow: hidden;
-	width: 90vw;
-	height: 60vh;
+	width: 100vw;
+	height: 100vh;
+}
+
+.contentmap{
+	position: fixed;
+	top: 8px;
+	background: white;
+	border-radius: 5px;
+	margin-left: 20vw;
+	margin-right: 20vw;
 }
