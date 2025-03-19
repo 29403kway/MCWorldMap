@@ -47,11 +47,12 @@ body{
 #draggable{
   position: absolute;
   place-items: center;
-  border: 2px solid #275ddb;
   cursor: move;
 }
 
 .mapframe{
 	border: 2px solid #275ddb;
 	overflow: hidden;
+	width: 40vw;
+	height: 40vh;
 }
