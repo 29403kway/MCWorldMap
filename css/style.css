@@ -44,10 +44,14 @@ body{
 	background-color: rgb(153, 228, 255);
 }
 
-#draggable {
+#draggable{
   position: absolute;
   place-items: center;
   border: 2px solid #275ddb;
   cursor: move;
-  padding: 10px;
+}
+
+.mapframe{
+	border: 2px solid #275ddb;
+	overflow: hidden;
 }
