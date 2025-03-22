@@ -60,9 +60,10 @@ body{
 .contentmap{
 	position: fixed;
 	background: white;
-	border-radius: 25px;
+	border-radius: 5px;
 	margin-left: 20vw;
 	margin-right: 20vw;
-	left: 50%;
+	left: 50vw;
 	top: 1vh;
+	place-items: center;
 }
