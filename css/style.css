@@ -27,8 +27,13 @@ body{
 	margin-right: 20vw;
 }
 
-.img{
+#img{
 	border-radius: 15px;
+}
+
+.home-img{
+	width: 45vw;
+	height: auto;
 }
 
 .btn{
