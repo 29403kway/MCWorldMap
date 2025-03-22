@@ -63,7 +63,8 @@ body{
 	border-radius: 5px;
 	margin-left: 20vw;
 	margin-right: 20vw;
-	left: 50vw;
+	left: 25vw;
 	top: 1vh;
 	place-items: center;
+	padding: 20px;
 }
